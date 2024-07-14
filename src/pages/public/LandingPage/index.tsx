@@ -1,18 +1,21 @@
 import Header from '@/components/Header';
-import { Grid, useTheme } from '@mui/material';
+import { Grid, useMediaQuery, useTheme } from '@mui/material';
 import Pill from './components/Pill';
 import { AnimalType } from './components/Pill/types';
 import CallToAction from './components/CallToAction';
+import puppy from "@/assets/puppy.png";
 
 export default function LandingPage() {
   const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 
   return (
     <Grid sx={{
       backgroundColor: theme.palette.background.default,
       width: '100vw',
       height: '100vh',
-      padding: '0 70px'
+      padding: isMobile ? '0 20px' : '0 70px',
+      overflow: 'hidden'
     }}>
       <Header />
       <Grid 
@@ -22,12 +25,26 @@ export default function LandingPage() {
         height: '50%'
       }}>
         <CallToAction />
-        <Grid container xs={7} height='auto' gap={8}>
-          <Pill type={AnimalType.Dog} />
-          <Pill type={AnimalType.Cat} />
-          <Pill type={AnimalType.GuineaPig} />
-        </Grid>
+        {isMobile ? (
+          null
+        ) : (
+          <Grid 
+            xs={12} 
+            sm={12} 
+            md={7}
+            lg={7} 
+            xl={7}
+            gap={8}
+            container 
+            height='auto' 
+          >
+            <Pill type={AnimalType.Dog} />
+            <Pill type={AnimalType.Cat} />
+            <Pill type={AnimalType.GuineaPig} />
+          </Grid>
+        )}
       </Grid>
+      {isMobile ? <img src={puppy} /> : null}
     </Grid>
   )
 }

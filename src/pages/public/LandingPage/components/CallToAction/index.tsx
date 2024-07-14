@@ -1,21 +1,43 @@
-import { Button, Grid, Typography, useTheme } from '@mui/material';
+import { Button, Grid, Typography, useMediaQuery, useTheme } from '@mui/material';
 import Bubble from '../Bubble';
 import { LuBone } from 'react-icons/lu';
 import { PiPawPrint } from 'react-icons/pi';
 
 export default function CallToAction() {
   const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+  const mobileStyles = {
+    'textAlign': 'center',
+    'justifyContent': 'center',
+  }
 
   return (
     <Grid 
       item 
-      xs={5} 
+      xs={12} 
+      sm={12} 
+      md={5}
+      lg={5} 
+      xl={5} 
       sx={{
         display: 'flex',
         alignItems: 'center'
       }}
     >
-      <Grid container sx={{ width: '80%', position: 'relative' }} gap={4}>
+      <Grid 
+        container 
+        xs={12} 
+        sm={12} 
+        md={10}
+        lg={10} 
+        xl={10}
+        gap={4}
+        sx={{ 
+          width: '80%',
+          position: 'relative',
+          ...(isMobile ? mobileStyles : {})
+        }} 
+      >
         <Grid item sx={{ position: 'relative' }}>
           <Bubble 
             styles={{ 
