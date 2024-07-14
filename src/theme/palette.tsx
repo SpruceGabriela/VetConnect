@@ -1,19 +1,25 @@
 const palette = {
   primary: {
-    main: '#e08b5e',
-    light: '#f9d0bd',
-    dark: '#b24d08',
+    main: '#E3B558',
+    light: '#ffd071',
+    dark: '#9d7d3b',
     contrastText: '#ffffff',
   },
   secondary: {
-    main: '#5484a5',
-    light: '#b8e4fb',
-    dark: '#3d526c',
+    main: '#272F3B',
+    light: '#6c81a1',
+    dark: '#000000',
     contrastText: '#ffffff',
+  },
+  tertiary: {
+    main: '#91BDBA',
+    light: '#cdf0ee',
+    dark: '#4f6563',
+    contrastText: '#362B26',
   },
   error: {
     main: '#f2667b',
-    light: '#ffcad7',
+    light: '#F7D9DF',
     dark: '#c70026',
   },
   warning: {
@@ -22,9 +28,10 @@ const palette = {
     dark: '#df6705',
   },
   info: {
-    main: '#1976d2',
-    light: '#64b5f6',
-    dark: '#1565c0',
+    main: '#8BC2D7',
+    light: '#a0dff8',
+    dark: '#5e818f',
+    contrastText: '#ffffff',
   },
   success: {
     main: '#78d9ac',
@@ -32,12 +39,12 @@ const palette = {
     dark: '#005d26',
   },
   background: {
-    default: '#fffdfd',
-    paper: '#fff4f4',
+    default: '#FEFEFE',
+    paper: '#c5e2e0',
   },
   text: {
     primary: '#000000',
-    secondary: '#362B26',
+    secondary: '#272F3B',
     disabled: '#b1adab',
   },
 };
