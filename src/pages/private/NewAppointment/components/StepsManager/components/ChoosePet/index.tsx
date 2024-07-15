@@ -1,21 +1,15 @@
-import { Button, Grid, Typography, useTheme } from "@mui/material";
-import PetCard from "../PetCard";
+import { Button, Grid } from "@mui/material";
 import { BiPlusCircle } from "react-icons/bi";
+import PetCard from "../../../PetCard";
+import FormHeader from "../FormHeader";
 
 export default function ChoosePet() {
-  const theme = useTheme();
-
   return (
     <Grid>
-      <Grid sx={{
-        display: 'flex',
-        justifyContent: 'center',
-        flexDirection: 'column',
-        textAlign: 'center'
-      }}>
-        <Typography sx={{ fontWeight: 500 }}>My pets</Typography>
-        <Typography color={theme.palette.text.disabled}>Which pet will be attended?</Typography>
-      </Grid>
+      <FormHeader 
+        title='My pets'
+        subtitle='Which pet will be attended?'
+      />
       <Grid 
         container sx={{ 
           margin: '24px 0',

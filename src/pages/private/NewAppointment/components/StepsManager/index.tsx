@@ -1,5 +1,4 @@
 import { Grid } from '@mui/material';
-import ChoosePet from './components/ChoosePet';
 
 export default function StepsManager() {
   return (
@@ -9,7 +8,8 @@ export default function StepsManager() {
       marginTop: '20px',
       minWidth: '500px',
     }}>
-      <ChoosePet />
+      {/* <ChoosePet /> */}
+      {/* <ChooseService /> */}
     </Grid>
   );
 }

@@ -1,4 +1,5 @@
-import { Avatar, Grid, Typography } from '@mui/material';
+import { Grid, Typography } from '@mui/material';
+import PetAvatar from '../Avatar';
 
 interface Props {
   petName: string;
@@ -10,11 +11,7 @@ export default function PetCard({ petName }: Props) {
       width: 'min-content',
       textAlign: 'center'
     }}>
-      <Avatar sx={{ 
-        height: '80px', 
-        width: '80px', 
-        marginBottom: '8px' 
-      }}/>
+      <PetAvatar />
       <Typography>
         { petName }
       </Typography>
