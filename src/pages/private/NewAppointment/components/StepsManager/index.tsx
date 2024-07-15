@@ -1,4 +1,5 @@
 import { Grid } from '@mui/material';
+import Summary from './components/Summary';
 
 export default function StepsManager() {
   return (
@@ -10,6 +11,7 @@ export default function StepsManager() {
     }}>
       {/* <ChoosePet /> */}
       {/* <ChooseService /> */}
+      <Summary />
     </Grid>
   );
 }
