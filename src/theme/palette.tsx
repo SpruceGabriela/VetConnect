@@ -45,7 +45,7 @@ const palette = {
   text: {
     primary: '#000000',
     secondary: '#272F3B',
-    disabled: '#b1adab',
+    disabled: '#8c8988',
   },
 };
 

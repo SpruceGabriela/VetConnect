@@ -1,8 +1,8 @@
-import LandingPage from "./pages/public/LandingPage";
+import NewAppointment from "./pages/private/NewAppointment";
 
 function App() {
   return (
-    <LandingPage />
+    <NewAppointment />
   );
 }
 

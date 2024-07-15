@@ -17,7 +17,7 @@ export default function LandingPage() {
       padding: isMobile ? '0 20px' : '0 70px',
       overflow: 'hidden'
     }}>
-      <Header />
+      <Header isLoggedIn={false} />
       <Grid 
         container
         sx={{

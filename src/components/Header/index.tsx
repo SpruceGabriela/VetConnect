@@ -1,6 +1,10 @@
 import { Button, Grid, Typography, useTheme } from '@mui/material';
 
-export default function Header() {
+interface Props {
+  isLoggedIn: boolean;
+}
+
+export default function Header({ isLoggedIn }: Props) {
   const theme = useTheme();
 
   return (
@@ -19,20 +23,22 @@ export default function Header() {
       >
         VetConnect
       </Typography>
-      <Grid>
-        <Button 
-          variant='text'
-          color='secondary'
-        >
-          Login
-        </Button>
-        <Button
-          variant='contained'
-          color='secondary'
-        >
-          Sign up
-        </Button>
-      </Grid>
+      {!isLoggedIn ? (
+        <Grid>
+          <Button 
+            variant='text'
+            color='secondary'
+          >
+            Login
+          </Button>
+          <Button
+            variant='contained'
+            color='secondary'
+          >
+            Sign up
+          </Button>
+        </Grid>
+      ) : null}
     </Grid>
   )
 }
