@@ -1,5 +1,6 @@
 import { Grid } from '@mui/material';
-import ChooseDate from './components/ChooseDate';
+import FormFooter from './components/FormFooter';
+import Summary from './components/Summary';
 
 export default function StepsManager() {
   return (
@@ -7,12 +8,15 @@ export default function StepsManager() {
       display: 'flex',
       justifyContent: 'center',
       marginTop: '20px',
-      minWidth: '500px',
+      width: '500px',
+      position: 'relative',
+      height: '83%'
     }}>
       {/* <ChoosePet /> */}
       {/* <ChooseService /> */}
-      <ChooseDate />
-      {/* <Summary /> */}
+      {/* <ChooseDate /> */}
+      <Summary />
+      <FormFooter />
     </Grid>
   );
 }
