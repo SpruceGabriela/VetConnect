@@ -1,6 +1,7 @@
 import Header from '@/components/Header';
 import { Grid, Typography, useMediaQuery, useTheme } from '@mui/material';
 import StepsManager from './components/StepsManager';
+import PetsIcon from '@mui/icons-material/Pets';
 
 export default function NewAppointment() {
   const theme = useTheme();
@@ -12,8 +13,19 @@ export default function NewAppointment() {
       width: '100vw',
       height: '100vh',
       padding: isMobile ? '0 20px' : '0 70px',
-      overflow: 'hidden'
+      overflow: 'hidden',
+      position: 'relative'
     }}>
+      <PetsIcon 
+        sx={{ 
+          fontSize: '30rem',
+          position: 'absolute',
+          right: '-100px',
+          bottom: '-70px',
+          rotate: '-45deg',
+          color: theme.palette.success.light,
+        }} 
+      />
       <Header isLoggedIn />
       <Grid sx={{ height: '100%' }}>
         <Typography variant='h3' sx={{ fontSize: '20px' }}>
