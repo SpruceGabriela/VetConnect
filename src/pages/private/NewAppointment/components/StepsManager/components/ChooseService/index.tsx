@@ -46,7 +46,7 @@ export default function ChooseService({
       <Grid 
         sx={{
           display: 'flex',
-          justifyContent: 'center',
+          justifyContent: 'start',
           flexDirection: 'row',
           textAlign: 'start',
           marginBottom: '16px'

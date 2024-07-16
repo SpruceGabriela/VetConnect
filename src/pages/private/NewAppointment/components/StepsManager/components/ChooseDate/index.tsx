@@ -11,7 +11,7 @@ export default function ChooseDate() {
       <Grid 
         sx={{
           display: 'flex',
-          justifyContent: 'center',
+          justifyContent: 'start',
           flexDirection: 'row',
           textAlign: 'start',
           marginBottom: '16px'
